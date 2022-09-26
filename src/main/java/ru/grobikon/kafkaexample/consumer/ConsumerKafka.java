@@ -12,7 +12,7 @@ public class ConsumerKafka {
 
     @KafkaListener(topics = "notificationTopic")
     public void handleNotification(MessageKafka messageKafka) {
-        log.debug("Получили сообщение messageKafka: {}", messageKafka);
+        log.debug("Получили сообщение messageKafka: {}", messageKafka.getMessage());
         System.out.println("Получили сообщение messageKafka: " + messageKafka);
     }
 }
